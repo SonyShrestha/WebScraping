@@ -1,0 +1,22 @@
+{
+  "bin": {
+    "monetary": "m",
+    "frequency": "f",
+    "recency": "r"
+  },
+  "map_dict": {
+    "1": "Lost",
+    "2": "Risky",
+    "3": "Promising",
+    "4": "Loyal",
+    "5": "Champion"
+  },
+  "extra_facts": {
+    "frequency": "frequency = log(2+total_frequency)*average_frequency_per_day*((1+total_unique_frequency)/(1+total_frequency))",
+    "monetary": "monetary = log(2+total_transaction_amount)*average_transaction_amount_per_day*(log(2+total_successful_transactions)/log(2+total_unsuccessful_transactions))"
+  },
+  "quartile_bin": {
+    "division": [0, 0.2, 0.4, 0.6, 0.8, 1],
+    "labels": [1, 2, 3, 4, 5]
+  }
+}
